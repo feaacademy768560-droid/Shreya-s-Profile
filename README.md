@@ -1,2 +1,245 @@
-# Shreya's Profile
-My Professional Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Shreya Sharma — educator, Master Teacher, facilitator and lifelong learner.">
+  <title>Shreya Sharma | Professional Portfolio</title>
+  <style>
+    :root{
+      --navy:#172554; --blue:#3157d5; --violet:#7653d6; --coral:#f28b75;
+      --ink:#202744; --muted:#66708b; --paper:#f7f8fc; --white:#fff;
+      --line:#e7eaf3; --mint:#dff7ef; --shadow:0 18px 55px rgba(32,39,68,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(231,234,243,.9)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:850;letter-spacing:-.04em;color:var(--navy);font-size:1.15rem}
+    .brand span{color:var(--violet)}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:.9rem;color:#59627d}
+    .navlinks a:hover{color:var(--blue)}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:11px 19px;background:linear-gradient(110deg,var(--blue),var(--violet));color:white;font-weight:700;box-shadow:0 8px 22px rgba(85,82,205,.2);cursor:pointer}
+    .hero{padding:76px 0 64px;overflow:hidden;background:radial-gradient(circle at 85% 10%,#e7e2ff 0,transparent 27%),radial-gradient(circle at 5% 80%,#ffe8e1 0,transparent 25%),linear-gradient(135deg,#fff 0%,#f5f6ff 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#eeedff;color:#5542b5;border:1px solid #dfdcff;padding:7px 13px;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.03;letter-spacing:-.065em;margin:22px 0 16px;color:var(--navy)}
+    h1 em{font-style:normal;background:linear-gradient(100deg,var(--blue),var(--violet),#c05e9c);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.12rem;max-width:650px;color:#5d6680}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .button.secondary{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+    .profile-art{position:relative;display:grid;place-items:center;min-height:340px}
+    .portrait-ring{width:min(300px,72vw);aspect-ratio:1;border-radius:50%;padding:12px;background:linear-gradient(135deg,#4569e8,#9062d8,#f29b84);box-shadow:0 25px 65px rgba(75,75,180,.22)}
+    .portrait{height:100%;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#e9edff);border:7px solid white;color:var(--navy);font-size:6rem;font-weight:900;letter-spacing:-.1em}
+    .floating{position:absolute;background:white;padding:12px 16px;border-radius:16px;box-shadow:var(--shadow);font-size:.86rem;font-weight:750}
+    .floating.one{top:25px;right:0}.floating.two{bottom:28px;left:0}
+    .section{padding:76px 0}
+    .section.white{background:white}
+    .section-head{max-width:680px;margin-bottom:32px}
+    .kicker{color:var(--violet);font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;font-weight:850}
+    h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.045em;color:var(--navy);margin:8px 0 12px}
+    .section-head p,.muted{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}
+    .panel,.card{background:white;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 8px 28px rgba(32,39,68,.045)}
+    .panel.tint{background:linear-gradient(145deg,#f0efff,#fff4f0);border:0}
+    .panel h3,.card h3{margin:0 0 10px;color:var(--navy);font-size:1.12rem}
+    .fact-list{display:grid;gap:13px;margin:0;padding:0;list-style:none}
+    .fact-list li{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--coral);margin-top:8px;flex:0 0 auto}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .stat{padding:17px;border-radius:16px;background:#f7f8ff}
+    .stat strong{display:block;color:var(--blue);font-size:1.35rem;letter-spacing:-.04em}
+    .stat span{font-size:.8rem;color:var(--muted)}
+    .timeline{position:relative;display:grid;gap:18px}
+    .timeline:before{content:"";position:absolute;left:12px;top:8px;bottom:8px;width:2px;background:#dcdafa}
+    .timeline-item{position:relative;padding-left:42px}
+    .timeline-item:before{content:"";position:absolute;left:5px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--violet);border:4px solid #eeebff}
+    .timeline-item h3{margin:0;color:var(--navy)}
+    .timeline-item .meta{font-size:.85rem;color:var(--violet);font-weight:750}
+    .timeline-item p{margin:6px 0 0;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{transition:transform .2s ease,box-shadow .2s ease}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#eeedff;color:var(--violet);font-size:1.35rem;margin-bottom:16px}
+    .card:nth-child(2) .icon{background:#fff0eb;color:#d76e55}
+    .card:nth-child(3) .icon{background:#e5f8f1;color:#23886b}
+    .card p{margin:0;color:var(--muted);font-size:.94rem}
+    .skill-wrap{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:9px 14px;border-radius:999px;background:#eef1ff;color:#344da9;font-size:.88rem;font-weight:700}
+    .skill:nth-child(3n+2){background:#fff0eb;color:#a9513d}
+    .skill:nth-child(3n){background:#e6f7f1;color:#26775f}
+    .goal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .goal{padding:24px;border-radius:20px;background:linear-gradient(135deg,#202e68,#5149a8);color:white}
+    .goal:nth-child(2){background:linear-gradient(135deg,#a34d70,#e18a78)}
+    .goal h3{margin:0 0 8px}.goal p{margin:0;color:rgba(255,255,255,.84)}
+    .note{font-size:.83rem;color:#7a8298;margin-top:20px}
+    .contact{background:linear-gradient(120deg,#1c2a62,#5145a7);color:white;border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .contact h2{color:white;margin-top:0}.contact p{color:rgba(255,255,255,.78);margin-bottom:0}
+    .contact .button{background:white;color:#293477;box-shadow:none;white-space:nowrap}
+    footer{padding:28px 0;color:#788098;font-size:.85rem;text-align:center}
+    @media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:52px}.profile-art{min-height:290px}.cards{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.container{width:min(100% - 28px,1120px)}.section{padding:56px 0}.cards,.goal-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.panel,.card{padding:21px}.contact{padding:28px}.floating.one{right:-2px}.floating.two{left:-2px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">SHREYA<span>.</span></a>
+        <div class="navlinks">
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#goals">Vision</a>
+        </div>
+        <a class="nav-cta" href="#contact">Let's connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Educator · Facilitator · Lifelong learner</span>
+          <h1>Hello, I'm<br><em>Shreya Sharma.</em></h1>
+          <p class="lead">I work in education and teacher development, with a focus on meaningful classroom experiences, student engagement and helping people build confidence through learning.</p>
+          <div class="hero-actions">
+            <a class="button" href="#experience">Explore my journey</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="profile-art" aria-label="Initials-based profile illustration">
+          <div class="portrait-ring"><div class="portrait">SS</div></div>
+          <div class="floating one">✦ Learning with purpose</div>
+          <div class="floating two">✧ Growing through experience</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">A little about me</span>
+          <h2>Purpose-led work. People-centred growth.</h2>
+          <p>I believe education can help people recognise their abilities, express themselves and create new opportunities. My work brings together teaching, facilitation, communication and continuous improvement.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <h3>My professional approach</h3>
+            <ul class="fact-list">
+              <li><span class="dot"></span><span>Encouraging learners to participate actively and communicate with confidence.</span></li>
+              <li><span class="dot"></span><span>Supporting teachers with facilitation practices and student-engagement strategies.</span></li>
+              <li><span class="dot"></span><span>Creating practical, inclusive learning experiences that connect with everyday life.</span></li>
+              <li><span class="dot"></span><span>Learning from feedback and looking for ways to improve consistently.</span></li>
+            </ul>
+          </article>
+          <aside class="panel tint">
+            <h3>At a glance</h3>
+            <p class="muted">A snapshot of the experience and interests that shape my journey.</p>
+            <div class="stats">
+              <div class="stat"><strong>2025</strong><span>B.A. completed</span></div>
+              <div class="stat"><strong>FEA</strong><span>Education experience</span></div>
+              <div class="stat"><strong>MT</strong><span>Master Teacher role</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Experience & education</span>
+          <h2>My learning and career journey</h2>
+          <p>Built through classroom practice, collaboration and taking on new responsibilities.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Master Teacher — Freedom Employability Academy (FEA)</h3>
+            <div class="meta">July 2025 · Promotion within approximately six months</div>
+            <p>Support teacher development through facilitation training, classroom engagement strategies and guidance that helps learners participate more actively.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Teacher — Freedom Employability Academy (FEA)</h3>
+            <div class="meta">Started July 2025</div>
+            <p>Worked directly with learners to strengthen communication, English-speaking confidence, participation and practical life skills.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Bachelor of Arts (B.A.)</h3>
+            <div class="meta">Completed 2025 · Dr. Ram Manohar Lohia Avadh University</div>
+            <p>Undergraduate academic qualification.</p>
+          </div>
+        </div>
+        <p class="note">Education note: Additional study details, including any current LL.B. or M.A. enrolment, can be added once confirmed.</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">What I bring</span>
+          <h2>Skills, strengths & areas of practice</h2>
+          <p>Skills developed through teaching, training, classroom responsibilities and creative work.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">◎</div><h3>Teaching & facilitation</h3><p>Lesson facilitation, learner participation, classroom communication and activity-based learning.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Teacher development</h3><p>Supporting teachers with engagement strategies, feedback, observation and professional growth.</p></article>
+          <article class="card"><div class="icon">✦</div><h3>Communication</h3><p>Interpersonal communication, public speaking practice, English learning and clear messaging.</p></article>
+          <article class="card"><div class="icon">▦</div><h3>Digital & creative tools</h3><p>Canva, digital learning activities and exploring AI tools for educational and creative content.</p></article>
+          <article class="card"><div class="icon">♡</div><h3>People-centred leadership</h3><p>Empathetic listening, collaboration, constructive feedback and responsibility.</p></article>
+          <article class="card"><div class="icon">⌁</div><h3>Planning & organisation</h3><p>Classroom planning, attendance tracking, student follow-up and day-to-day coordination.</p></article>
+        </div>
+        <div style="margin-top:28px" class="skill-wrap">
+          <span class="skill">Communication</span><span class="skill">Facilitation</span><span class="skill">Canva</span>
+          <span class="skill">Student engagement</span><span class="skill">Teacher training</span><span class="skill">Mentoring</span>
+          <span class="skill">Classroom management</span><span class="skill">Digital learning</span><span class="skill">Teamwork</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Beyond the classroom</span>
+          <h2>Creative interests & independent ideas</h2>
+          <p>I enjoy exploring ways to combine learning, creativity and technology.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">▶</div><h3>Digital content creation</h3><p>Exploring YouTube, short-form videos and AI-assisted devotional and motivational content.</p></article>
+          <article class="card"><div class="icon">文</div><h3>English learning initiatives</h3><p>Interest in practical English learning and online tuition for adults and early-career learners.</p></article>
+          <article class="card"><div class="icon">✿</div><h3>Entrepreneurial exploration</h3><p>Exploring small-business ideas, including handmade personal-care products.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="goals">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Looking ahead</span>
+          <h2>A vision that keeps growing</h2>
+          <p>My interests span education, leadership, further learning and opportunities to make a positive difference.</p>
+        </div>
+        <div class="goal-grid">
+          <article class="goal"><h3>Education & leadership</h3><p>Continue growing as an educator, mentor and leader who helps others recognise and develop their potential.</p></article>
+          <article class="goal"><h3>Law & public service</h3><p>Explore law-related career pathways, government opportunities and structured preparation for competitive examinations.</p></article>
+        </div>
+        <p class="note">These are areas of interest and aspiration, not claims of completed qualifications or achieved career outcomes.</p>
+      </div>
+    </section>
+
+    <section class="section white" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div><span class="kicker" style="color:#d9d3ff">Connect</span><h2>Let's learn, collaborate and grow.</h2><p>Interested in education, training, learning initiatives or creative collaboration? I'd be happy to connect.</p></div>
+          <a class="button" href="mailto:">Add your email</a>
+        </div>
+        <p class="note">Before publishing, replace the email link with your real email address and add any professional links you want to share.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© <span id="year"></span> Shreya Sharma · Personal professional portfolio</div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
